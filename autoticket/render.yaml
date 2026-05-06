@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: autoticket-backend
+    env: python
+    buildCommand: "pip install -r backend/requirements.txt && cd backend && python knowledge_base.py"
+    startCommand: "cd backend && uvicorn main:app --host 0.0.0.0 --port $PORT"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0

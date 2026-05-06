@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --bg-dark: #0a0c10;
+  --surface: rgba(20, 24, 32, 0.7);
+  --border: rgba(255, 255, 255, 0.05);
+  --primary-accent: #6c5ce7;
+  --secondary-accent: #00cec9;
+  --text-main: #f5f6fa;
+  --text-muted: #7f8fa6;
+  
+  --cat-network: #0984e3;
+  --cat-hardware: #d63031;
+  --cat-software: #00b894;
+  --cat-access: #fdcb6e;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Outfit', sans-serif;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  min-height: 100vh;
+  background-image: 
+    radial-gradient(circle at 0% 0%, rgba(108, 92, 231, 0.05), transparent 30%),
+    radial-gradient(circle at 100% 100%, rgba(0, 206, 201, 0.05), transparent 30%);
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, var(--primary-accent), var(--secondary-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.panel {
+  background: var(--surface);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.5rem;
+  transition: transform 0.2s ease;
+}
+
+.panel-title {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-muted);
+}
+
+/* Upload Form */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+textarea {
+  width: 100%;
+  background: rgba(0,0,0,0.2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-main);
+  padding: 1rem;
+  font-size: 1rem;
+  resize: vertical;
+  min-height: 120px;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: var(--primary-accent);
+}
+
+.file-drop {
+  border: 2px dashed var(--border);
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.file-drop:hover {
+  border-color: var(--primary-accent);
+  background: rgba(108, 92, 231, 0.05);
+}
+
+.submit-btn {
+  width: 100%;
+  background: linear-gradient(135deg, var(--primary-accent), var(--secondary-accent));
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  transition: opacity 0.2s;
+}
+
+.submit-btn:hover {
+  opacity: 0.9;
+}
+.submit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Result Panel */
+.result-box {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.category-badge {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  background: rgba(255,255,255,0.1);
+  margin-bottom: 1rem;
+}
+
+.confidence-bar {
+  height: 6px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.confidence-fill {
+  height: 100%;
+  background: var(--secondary-accent);
+  transition: width 1s ease-out;
+}
+
+.solution-box {
+  background: rgba(0,0,0,0.2);
+  border-left: 3px solid var(--primary-accent);
+  padding: 1.5rem;
+  border-radius: 4px 8px 8px 4px;
+}
+
+.solution-title {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--primary-accent);
+}
+
+.loader {
+  border: 3px solid rgba(255,255,255,0.1);
+  border-top: 3px solid var(--primary-accent);
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+  margin: 2rem auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

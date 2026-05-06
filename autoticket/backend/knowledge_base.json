@@ -1,0 +1,110 @@
+[
+    {
+        "id": 1,
+        "text": "User cannot connect to the corporate VPN. The client is stuck on 'Verifying credentials'.",
+        "category": "Networking -> VPN",
+        "solution": "SOP-101: Restart the Cisco AnyConnect service, clear the local cache, and verify the user's 2FA token is synced."
+    },
+    {
+        "id": 2,
+        "text": "my screen is totally black no power",
+        "category": "Hardware -> Monitor",
+        "solution": "SOP-204: Check the physical power cable connection. If connected, test with a known working outlet. Replace monitor if no POST."
+    },
+    {
+        "id": 3,
+        "text": "The billing application is throwing a 500 Internal Server Error when generating monthly invoices.",
+        "category": "Software -> Internal App -> Billing",
+        "solution": "SOP-305: Check the billing-service Kubernetes pod logs. If 'OOMKilled', increase memory limit. Otherwise, verify database connection pool."
+    },
+    {
+        "id": 4,
+        "text": "Printer on 4th floor is out of cyan toner. Blinking red light.",
+        "category": "Hardware -> Printer",
+        "solution": "SOP-401: Dispatch local site technician to replace Cyan Toner Cartridge (Part #T-882). Clean the drum while replacing."
+    },
+    {
+        "id": 5,
+        "text": "I forgot my password and my account is locked out after too many tries.",
+        "category": "Access -> Active Directory",
+        "solution": "SOP-502: Agent should authenticate user via phone call using security questions, then unlock AD account and trigger a forced password reset email."
+    },
+    {
+        "id": 6,
+        "text": "Zoom is freezing during screen share on Mac.",
+        "category": "Software -> 3rd Party -> Zoom",
+        "solution": "SOP-603: Update Zoom client to latest version. If issue persists, disable Hardware Acceleration in Zoom Video Settings."
+    },
+    {
+        "id": 100,
+        "text": "cant connect to vpn",
+        "category": "Networking -> VPN",
+        "solution": "SOP-101: Restart the Cisco AnyConnect service, clear the local cache, and verify the user's 2FA token is synced."
+    },
+    {
+        "id": 101,
+        "text": "vpn not working stuck on login",
+        "category": "Networking -> VPN",
+        "solution": "SOP-101: Restart the Cisco AnyConnect service, clear the local cache, and verify the user's 2FA token is synced."
+    },
+    {
+        "id": 102,
+        "text": "monitor dead",
+        "category": "Hardware -> Monitor",
+        "solution": "SOP-204: Check the physical power cable connection. If connected, test with a known working outlet. Replace monitor if no POST."
+    },
+    {
+        "id": 103,
+        "text": "screen black no lights",
+        "category": "Hardware -> Monitor",
+        "solution": "SOP-204: Check the physical power cable connection. If connected, test with a known working outlet. Replace monitor if no POST."
+    },
+    {
+        "id": 104,
+        "text": "billing app crashed",
+        "category": "Software -> Internal App -> Billing",
+        "solution": "SOP-305: Check the billing-service Kubernetes pod logs. If 'OOMKilled', increase memory limit. Otherwise, verify database connection pool."
+    },
+    {
+        "id": 105,
+        "text": "invoice 500 error",
+        "category": "Software -> Internal App -> Billing",
+        "solution": "SOP-305: Check the billing-service Kubernetes pod logs. If 'OOMKilled', increase memory limit. Otherwise, verify database connection pool."
+    },
+    {
+        "id": 106,
+        "text": "need cyan ink 4th fl",
+        "category": "Hardware -> Printer",
+        "solution": "SOP-401: Dispatch local site technician to replace Cyan Toner Cartridge (Part #T-882). Clean the drum while replacing."
+    },
+    {
+        "id": 107,
+        "text": "printer blinking red out of toner",
+        "category": "Hardware -> Printer",
+        "solution": "SOP-401: Dispatch local site technician to replace Cyan Toner Cartridge (Part #T-882). Clean the drum while replacing."
+    },
+    {
+        "id": 108,
+        "text": "pwd forgotten locked",
+        "category": "Access -> Active Directory",
+        "solution": "SOP-502: Agent should authenticate user via phone call using security questions, then unlock AD account and trigger a forced password reset email."
+    },
+    {
+        "id": 109,
+        "text": "account locked help",
+        "category": "Access -> Active Directory",
+        "solution": "SOP-502: Agent should authenticate user via phone call using security questions, then unlock AD account and trigger a forced password reset email."
+    },
+    {
+        "id": 110,
+        "text": "zoom freezing macbook",
+        "category": "Software -> 3rd Party -> Zoom",
+        "solution": "SOP-603: Update Zoom client to latest version. If issue persists, disable Hardware Acceleration in Zoom Video Settings."
+    },
+    {
+        "id": 111,
+        "text": "screen share breaks zoom",
+        "category": "Software -> 3rd Party -> Zoom",
+        "solution": "SOP-603: Update Zoom client to latest version. If issue persists, disable Hardware Acceleration in Zoom Video Settings."
+    }
+]
